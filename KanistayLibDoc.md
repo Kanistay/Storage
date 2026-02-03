@@ -160,6 +160,47 @@ Tab:AddTextbox({
 })
 ```
 
+## Creating a Label
+```lua
+Tab:AddLabel("Label")
+```
+
+### Changing the value of an existing label
+```lua
+CoolLabel:Set("Label New!")
+```
+
+
+## Creating a Paragraph
+```lua
+Tab:AddParagraph("Paragraph","Paragraph Content")
+```
+
+### Changing an existing paragraph
+```lua
+CoolParagraph:Set("Paragraph New!", "New Paragraph Content!")
+```
+
+
+## Creating an Adaptive Input
+```lua
+Tab:AddTextbox({
+	Name = "Textbox",
+	Default = "default box input",
+	TextDisappear = true,
+	Callback = function(Value)
+		print(Value)
+	end	  
+})
+
+--[[
+Name = <string> - The name of the textbox.
+Default = <string> - The default value of the textbox.
+TextDisappear = <bool> - Makes the text disappear in the textbox after losing focus.
+Callback = <function> - The function of the textbox.
+]]
+```
+
 ## Creating a Keybind
 ```lua
 Tab:AddBind({
